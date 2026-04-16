@@ -1,0 +1,167 @@
+index.<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VNEX INFRATECH Pvt Ltd</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
+body{background:#f8fafc;color:#111;}
+
+header{
+  background:#0f172a;color:#fff;padding:15px;
+  position:sticky;top:0;
+}
+.nav{
+  display:flex;justify-content:space-between;align-items:center;
+}
+.logo{font-size:24px;font-weight:bold;}
+.logo span{color:#f59e0b;}
+
+.nav a{
+  color:white;margin:0 10px;text-decoration:none;
+}
+
+.hero{
+  height:90vh;
+  background:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd') center/cover;
+  display:flex;align-items:center;justify-content:center;
+  color:white;text-align:center;
+}
+.hero h1{font-size:45px;}
+
+.btn{
+  background:#f59e0b;padding:10px 20px;color:white;
+  display:inline-block;margin-top:20px;text-decoration:none;
+}
+
+.section{padding:60px 20px;text-align:center;}
+
+.cards{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:white;padding:20px;border-radius:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.gallery img{
+  width:100%;height:200px;object-fit:cover;border-radius:10px;
+}
+
+.contact-box{
+  background:white;
+  padding:25px;
+  border-radius:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  text-align:left;
+  max-width:500px;
+  margin:auto;
+}
+
+input,textarea{
+  width:100%;padding:10px;margin:10px 0;
+}
+
+.whatsapp{
+ position:fixed;bottom:20px;right:20px;
+ background:#25D366;color:white;padding:15px;
+ border-radius:50%;
+}
+
+footer{
+  background:#0f172a;color:white;text-align:center;padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="nav">
+<div class="logo">VNEX <span>INFRATECH</span></div>
+<div>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+<div>
+<h1>Building Strong Future</h1>
+<p>Construction | Industrial | Civil Work</p>
+<a href="#contact" class="btn">Get Quote</a>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+<h2>Our Services</h2>
+<div class="cards">
+<div class="card">Residential Construction</div>
+<div class="card">Commercial Projects</div>
+<div class="card">Industrial Shed Work</div>
+<div class="card">Civil Work</div>
+<div class="card">Interior & Renovation</div>
+<div class="card">Turnkey Projects</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section" id="projects">
+<h2>Our Projects</h2>
+<div class="cards gallery">
+<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
+<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab">
+<img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742">
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+<h2>Contact Us</h2>
+
+<div class="contact-box">
+<p><strong>Company:</strong> VNEX INFRATECH Pvt. Ltd.</p>
+<p><strong>Phone:</strong> +91 7206670958</p>
+<p><strong>Email:</strong> vnexinfra@gmail.com</p>
+<p><strong>Address:</strong><br>
+Flat No. F-8, Royal Apartment<br>
+1st Floor, 127/530 W-1 Saket Nagar<br>
+Kanpur - 208014, India
+</p>
+</div>
+
+<form onsubmit="sendWhatsApp(event)">
+<input type="text" placeholder="Name" required>
+<input type="text" placeholder="Phone" required>
+<textarea placeholder="Message"></textarea>
+<button class="btn">Send Inquiry</button>
+</form>
+
+</section>
+
+<footer>
+<p>© VNEX INFRATECH Pvt Ltd | All Rights Reserved</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/917206670958">💬</a>
+
+<script>
+function sendWhatsApp(e){
+ e.preventDefault();
+ let name=document.querySelector("input").value;
+ let msg=document.querySelector("textarea").value;
+ window.open("https://wa.me/917206670958?text=Name:"+name+" Message:"+msg);
+}
+</script>
+
+</body>
+</html>
